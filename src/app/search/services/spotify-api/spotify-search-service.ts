@@ -18,7 +18,7 @@ export class SpotifySearchService {
       .set('q', q)
       .set('type','album,track')
       .set('limit', 10)
-      .set('offset', 5)
+      .set('offset', 10)
       .set('market', 'ES')
 
     return this._http.get<any>(
