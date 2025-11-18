@@ -5,6 +5,7 @@ on:
     push:
         branches:
             - main
+            - new-branch
 
 jobs:
     deploy:
@@ -24,6 +25,9 @@ jobs:
 
             - name: Build angular
               run: npm run build
+
+            - name: Debug - Ver estructura de carpetas
+              run: ls -R dist
 
             - name: Configure AWS Credentials
               uses: aws-actions/configure-aws-credentials@v4
